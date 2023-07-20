@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion</title>
+    <style>
+        .row1{
+            height: 600px;
+            background-image: linear-gradient(to bottom right, blue, violet, yellow);
+            padding-top:250px;
+        }
+        .inner{
+            min-height:200px;
+        }
+        #inputFahrenheit{
+            height:70px;
+            width: 300px;
+            font-size: 35px;
+            margin-left: 50px;
+            border-radius: 10px;
+            padding:10px;
+            transition: transform .2s;
+        }
+        #inputFahrenheit:hover{
+           transform: scale(1.2);
+        }
+        #inputFahrenheit::placeholder{
+            font-size: 35px;
+            text-align:center;
+        }
+        #outputCelsius::placeholder{
+            font-size: 35px;
+            text-align:center;
+        }
+        #outputCelsius{
+            height:70px;
+            width: 400px;
+            font-size: 35px;
+            margin-left: 50px;
+            border-radius: 10px;
+            padding:10px;
+            transition: transform .2s;
+        }
+        #outputCelsius:hover{
+            transform: scale(1.2);
+        }
+    </style>
+    <script src="code.js"></script>
+</head>
+<body>
+    <div class="row1">
+        <center>
+            <div class="inner">
+                
+                    <label><b style="font-size: 30px;">Fahrenheit:</b></label>
+                    <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="temperatureConverter(this.value)"
+                        onchange="temperatureConverter(this.value)">
+                    <b style="font-size: 50px; margin-left:50px; margin-right:30px;">TO</b>
+                    <b style="font-size: 30px; margin-left:30px;">Celsius:</b> <input id="outputCelsius" type="number" placeholder="Celsius">
+            </div>
+        </center>
+    </div>
+</body>
+</html>
